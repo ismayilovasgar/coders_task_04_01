@@ -88,9 +88,12 @@ let students = [
 
 function searchByName() {
   let search_name = prompt("Telebe adi daxil edin: ");
-  students
-    .filter((student) => student.name === search_name)
-    .map((el) => console.log(`Telebe: ${el.name} ${el.surname} ${el.age}`));
+  let filter_students = students.filter(
+    (student) => student.name === search_name
+  );
+  if (filter_students.length > 0)
+    filter_students.map((el) => console.log(`${el.name} ${el.surname}`));
+  else console.log("bele bir user yoxdur");
 }
 // searchByName();
 
@@ -112,4 +115,4 @@ function soztekrari() {
     }, 1000 * time);
   }
 }
-soztekrari();
+// soztekrari();
