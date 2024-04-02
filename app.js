@@ -123,4 +123,4 @@ function soztekrari() {
     }, 1000 * k);
   }
 }
-soztekrari();
+// soztekrari();
