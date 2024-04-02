@@ -102,17 +102,16 @@ function soztekrari() {
   let words = prompt("soz daxil edin:");
   let k = 0;
   for (let i = 1; i <= words.length; i++) {
-    k++;
-    loop(words.slice(0, i), k);
+    loop(words.slice(0, i));
   }
   for (let j = words.length - 1; j > 0; j--) {
-    k++;
-    loop(words.slice(0, j), k);
+    loop(words.slice(0, j));
   }
-  function loop(word, time) {
+  function loop(word) {
+    k++;
     setTimeout(function () {
       console.log(word);
-    }, 1000 * time);
+    }, 1000 * k);
   }
 }
-// soztekrari();
+soztekrari();
