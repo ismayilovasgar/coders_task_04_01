@@ -44,7 +44,7 @@ let demo = setInterval(() => {
     `color:${getRandomColor(0, 8)};`
   );
 }, 1000);
-clearInterval(demo);
+// clearInterval(demo);
 
 // - 2
 let students = [
@@ -114,4 +114,4 @@ function soztekrari() {
     }, 1000 * k);
   }
 }
-soztekrari();
+// soztekrari();
