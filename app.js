@@ -28,6 +28,15 @@ function getRandomColor(min, max) {
   let num = Math.floor(Math.random() * (max - min + 1)) + min;
   return colors[num];
 }
+function getRandomColor2() {
+  return (
+    "#" +
+    Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, "0")
+      .toUpperCase()
+  );
+}
 
 let demo = setInterval(() => {
   let now = new Date();
@@ -40,8 +49,8 @@ let demo = setInterval(() => {
   let saniye = Math.trunc((between / 1000) % 60);
   console.clear();
   console.log(
-    `%c ${gun} gun ${saat} saat ${deqiqe} deqiqe ${saniye} saniye`,
-    `color:${getRandomColor(0, 8)};`
+    // `%c ${gun} gun ${saat} saat ${deqiqe} deqiqe ${saniye} saniye`,`color:${getRandomColor(0, 8)};`
+    `%c ${gun} gun ${saat} saat ${deqiqe} deqiqe ${saniye} saniye`,`color:${getRandomColor2()};`
   );
 }, 1000);
 // clearInterval(demo);
