@@ -94,6 +94,22 @@ function searchByName() {
 }
 // searchByName();
 
-
-// - 3 
-//  let words =prompt("soz daxil edin:");
+// - 3
+function soztekrari() {
+  let words = prompt("soz daxil edin:");
+  let k = 0;
+  for (let i = 1; i <= words.length; i++) {
+    k++;
+    loop(words.slice(0, i), k);
+  }
+  for (let j = words.length - 1; j > 0; j--) {
+    k++;
+    loop(words.slice(0, j), k);
+  }
+  function loop(word, time) {
+    setTimeout(function () {
+      console.log(word);
+    }, 1000 * time);
+  }
+}
+soztekrari();
