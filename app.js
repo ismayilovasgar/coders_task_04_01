@@ -53,7 +53,7 @@ let demo = setInterval(() => {
     `%c ${gun} gun ${saat} saat ${deqiqe} deqiqe ${saniye} saniye`,`color:${getRandomColor2()};`
   );
 }, 1000);
-// clearInterval(demo);
+clearInterval(demo);
 
 // - 2
 let students = [
@@ -123,4 +123,4 @@ function soztekrari() {
     }, 1000 * k);
   }
 }
-// soztekrari();
+soztekrari();
